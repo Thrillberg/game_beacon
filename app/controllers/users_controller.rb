@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   # respond_to :json
 
   def create
-    binding.pry
     @user = User.create(user_params)
     respond_to do |format|
       format.json { render :json => @user }
